@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}Moda a lo crochet - {{ current_category }}{% endblock %}</title>
+</head>
+<body style="background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); font-family:Courier, monospace">
+
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-image: linear-gradient(to top, #000000 0%, #000000 100%); justify-content: space-between;">
+        <div class="container-fluid">
+
+            <!-- Título a la derecha -->
+            <a class="navbar-brand order-2" style="text-transform: uppercase;" href="/">Moda a lo crochet</a>
+
+            <!-- Botón de alternancia para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Opciones del menú a la izquierda -->
+            <div class="collapse navbar-collapse order-1" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <div class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="color: aliceblue;">
+                                        Productos
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item active">
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Vestidos de baño') }}" style="color: aliceblue;">Vestidos de baño</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Crop tops') }}" style="color: aliceblue;">Crop tops</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Amigurumis') }}" style="color: aliceblue;">Amigurumis</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Detalles') }}" style="color: aliceblue;">Detalles</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Salidas de baño') }}" style="color: aliceblue;">Salidas de baño</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Cojuntos') }}" style="color: aliceblue;">Cojuntos</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ url_for('categoria', nombre_categoria='Bolsos') }}" style="color: aliceblue;">Bolsos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('registro') }}">Registrarme</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-4">
+        <h1><img src="/static/logo.jpg" style="width: 150px" height="150px";></h1>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Incluye los scripts de Bootstrap (puedes utilizar un CDN o descargar e incluir los archivos localmente) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

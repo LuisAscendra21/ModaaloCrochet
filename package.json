@@ -1,0 +1,12 @@
+{
+  "name": "store.io",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "flask": "^0.2.10"
+  }
+}

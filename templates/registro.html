@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}code store - Registro{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6">
+            <div class="card shadow-lg mb-5 bg-body rounded d-flex flex-column h-100" id="caregistro">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Registro</h3>
+                    <form action="{{ url_for('registro') }}" method="post" class="d-flex flex-column h-100">
+                        <div class="mb-3">
+                            <label for="validationServerNombre" class="form-label">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" id="validationServerNombre" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="validationServerApellido" class="form-label">Apellido</label>
+                            <input type="text" name="apellido" class="form-control" id="validationServerApellido" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="validationServerUsername" class="form-label">Correo electrónico</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                <input type="text" name="username" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="validationServerPassword" class="form-label">Contraseña</label>
+                            <input type="password" name="password" class="form-control" id="validationServerPassword" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="validationServerConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" name="confirm_password" class="form-control" id="validationServerConfirmPassword" required>
+                        </div>
+
+                        <div class="mt-3 text-center">
+                            <button class="btn btn-primary btn-lg" type="submit">Registrarse</button>
+                        </div>
+
+                        <div class="mt-3 text-center">
+                            <a href="{{ url_for('login') }}" class="btn btn-link" style="color: #000000c9; text-decoration: none; border: 1px solid rgba(0, 0, 0, 0.336); background-color: rgba(165, 163, 163, 0.747);"><strong>¿Ya tienes una cuenta? ingrea aquí.</strong></a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

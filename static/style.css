@@ -1,0 +1,173 @@
+/* static/css/styles.css */
+
+.bg-background {
+    background-image: url('/static/fondo.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px; 
+    color: white; 
+}
+.dropdown-menu {
+    background-image: url(/static/fondomenu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.navbar-nav .nav-item .dropdown-item:hover,
+.navbar-nav .nav-item .dropdown-item:focus {
+    background-color: rgba(41, 40, 40, 0.582);
+}
+/* static/style.css */
+
+.card {
+    height: 80vh; /* Establece la altura de la tarjeta al 70% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.footer ion-icon {
+    font-size: 30px;
+    color: #333;
+}
+
+.footer ion-icon:hover {
+    color: #faaca8;
+    font-size: 35px;
+}
+.col-content::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+}
+
+.col-content::-webkit-scrollbar-thumb {
+    background-color: #faaca8; /* Color del thumb (barra deslizadora) */
+    border-radius: 6px; /* Bordes redondeados del thumb */
+}
+
+.col-content::-webkit-scrollbar-track {
+    background-color: #ddd6f3; /* Color de la pista (fondo del scrollbar) */
+}
+
+/* Estilos para el efecto de escritura */
+.typing-effect {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 2px solid #faaca8;
+    font-size: 1.5em;
+}
+
+/* Agrega este bloque de estilos en tu archivo de estilos CSS o en línea */
+
+#calogin {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: url(/static/uploads/fondoformu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #8000b3; /* Cambia el color de fondo al pasar el ratón */
+    border-color: #e02dd1; /* Cambia el color del borde al pasar el ratón */
+}
+
+#calogin:hover {/* En tu archivo style.css o en la sección de estilos de tu HTML */
+    /* Añade estilos para el formulario de inicio de sesión */
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    }
+
+    .card-title {
+        color: #5a026b; /* Color del título */
+    }
+
+    .form-check-label {
+        color: #470049; /* Color de la etiqueta del checkbox */
+    }
+
+    .btn-primary {
+        background-color: #805485; /* Color de fondo del botón */
+        border-color: #df51cc; /* Color del borde del botón */
+    }
+
+    .btn-primary:hover {
+        background-color: #8000b3; /* Cambia el color de fondo al pasar el ratón */
+        border-color: #e02dd1; /* Cambia el color del borde al pasar el ratón */
+    }
+
+    /* Estilo para el enlace de "¿Olvidaste tu contraseña?" */
+    .mt-3 a {
+        color: #007bff; /* Color del enlace */
+    }
+
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#caregistro {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: url(/static/uploads/fondoformu.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #8000b3; /* Cambia el color de fondo al pasar el ratón */
+    border-color: #e02dd1; /* Cambia el color del borde al pasar el ratón */
+}
+
+#caregistro:hover {/* En tu archivo style.css o en la sección de estilos de tu HTML */
+    /* Añade estilos para el formulario de registro */
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    }
+
+    .card-title {
+        color: #5a026b; /* Color del título */
+    }
+
+    .form-check-label {
+        color: #470049; /* Color de la etiqueta del checkbox */
+    }
+
+    .btn-primary {
+        background-color: #805485; /* Color de fondo del botón */
+        border-color: #df51cc; /* Color del borde del botón */
+    }
+
+    .btn-primary:hover {
+        background-color: #8000b3; /* Cambia el color de fondo al pasar el ratón */
+        border-color: #e02dd1; /* Cambia el color del borde al pasar el ratón */
+    }
+
+    /* Estilo para el enlace de "¿Ya tienes una cuenta? Inicia sesión aquí." */
+    .mt-3 a {
+        color: #007bff; /* Color del enlace */
+    }
+
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#fondoproducts{
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-image: url(/static/uploads/fondo3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Ajusta la imagen para cubrir todo el fondo */
+    text-transform: uppercase;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Asegúrate de tener un archivo CSS para estilos -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Color de fondo suave */
+            color: #333; /* Color de texto oscuro */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Centrar verticalmente */
+            margin: 0; /* Eliminar márgenes */
+        }
+        h1 {
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Espaciado inferior */
+        }
+        button {
+            background-color: #dc3545; /* Color de fondo rojo */
+            color: white; /* Color de texto blanco */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cursor tipo puntero */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        button:hover {
+            background-color: #c82333; /* Color más oscuro al pasar el ratón */
+        }
+        a {
+            text-decoration: none; /* Sin subrayado */
+            color: #007bff; /* Color del enlace */
+            margin-top: 10px; /* Espaciado superior */
+        }
+        a:hover {
+            text-decoration: underline; /* Subrayado al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <p>Are you sure you want to delete the product "{{ product.title }}"?</p>
+    <form action="{{ url_for('delete_product', categoria=product.category.name, product_id=product.id) }}" method="POST">
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <a href="{{ url_for('home') }}">Cancel</a>
+</body>
+</html>

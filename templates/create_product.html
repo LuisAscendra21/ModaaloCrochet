@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Product{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="card p-4">
+            <h1 class="card-title text-center mb-4">Create Product</h1>
+            <form action="{{ url_for('create_product') }}" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" class="form-control" name="title" id="title" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea class="form-control" name="description" id="description" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price:</label>
+                    <input type="number" class="form-control" name="price" id="price" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select class="form-select" name="category" id="category" required>
+                        {% for category in categories %}
+                            <option value="{{ category }}">{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="photo" class="form-label">Choose Image:</label>
+                    <input type="file" class="form-control" name="photo" id="photo" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Product</button>
+            </form>
+            <a href="{{ url_for('productos') }}" class="btn btn-secondary btn-block mt-2">Back to Home</a>
+        </div>
+    </div>
+
+
+{% endblock %}

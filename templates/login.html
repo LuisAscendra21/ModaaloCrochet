@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}code store - Log in{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded" id="calogin">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Inicio de sesión</h3>
+                    <form action="{{ url_for('login') }}" method="post">
+                        <div class="mb-3">
+                            <label for="validationServerUsername" class="form-label">Correo electrónico</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                <input type="text" name="username" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="validationServerPassword" class="form-label">Contraseña</label>
+                            <input type="password" name="password" class="form-control" id="validationServerPassword" required>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberCheck">
+                            <label class="form-check-label" for="rememberCheck">Recordar cuenta</label>
+                        </div>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-lg" type="submit">Iniciar sesión</button>
+                        </div>
+
+                        <div class="mt-3 text-center" >
+                            <a href="#" style="color: #000000c9; text-decoration: none; border: 1px solid rgba(0, 0, 0, 0.336); background-color: rgba(165, 163, 163, 0.747);">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
